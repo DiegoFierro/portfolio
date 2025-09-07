@@ -1,0 +1,117 @@
+/*
+    Estilos generales de la página
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*
+    Estilos de la cabecera (header)
+*/
+header {
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Centramos el header y usamos un posicionamiento de la navegación*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/*
+    Estilos de la navegación (nav)
+*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50;
+}
+
+/*
+    Estilos del contenido principal (main)
+*/
+main {
+    flex: 1;
+    padding: 3rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+main section {
+    text-align: center;
+}
+
+main section h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+main section img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    border: 5px solid #bdc3c7;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*
+    Estilos del pie de página (footer)
+*/
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #34495e;
+    color: #ecf0f1;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
