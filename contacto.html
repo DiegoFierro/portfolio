@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="contenido-formulario">
+            <h1>Contacto</h1>
+            <a href="index.html">Volver a la página principal</a>
+
+            <form action="#" method="post">
+                <div class="campo-form">
+                    <label for="nombre">Nombre (requerido):</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="20" required>
+                </div>
+                <div class="campo-form">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" maxlength="20">
+                </div>
+                <div class="campo-form">
+                    <label for="email">Email (requerido):</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-form">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" onfocus="this.placeholder=''" onblur="this.placeholder='Ingrese su teléfono'">
+                </div>
+                <div class="campo-form">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="16" max="120">
+                </div>
+                <div class="campo-form">
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" name="direccion"></textarea>
+                </div>
+                <div class="campo-form">
+                    <label for="provincia">Provincia:</label>
+                    <input list="provincias-patagonicas" id="provincia" name="provincia">
+                    <datalist id="provincias-patagonicas">
+                        <option value="Chubut">
+                        <option value="Neuquén">
+                        <option value="Río Negro">
+                        <option value="Santa Cruz">
+                        <option value="Tierra del Fuego">
+                    </datalist>
+                </div>
+                <div class="campo-form">
+                    <label for="cp">Código Postal:</label>
+                    <input type="text" id="cp" name="cp" pattern="[A-Za-z]\d{4}[A-Za-z]{3}">
+                </div>
+                
+                <fieldset>
+                    <legend>Método preferido de contacto:</legend>
+                    <div class="opciones-inline">
+                        <input type="radio" id="contacto-email" name="metodo-contacto" value="email" checked>
+                        <label for="contacto-email">Correo electrónico</label>
+                        <input type="radio" id="contacto-postal" name="metodo-contacto" value="postal">
+                        <label for="contacto-postal">Correo postal</label>
+                        <input type="radio" id="contacto-telefono" name="metodo-contacto" value="telefono">
+                        <label for="contacto-telefono">Teléfono</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tipo de suscripción:</legend>
+                    <div class="opciones-inline">
+                        <input type="checkbox" id="suscripcion-noticias" name="suscripcion" value="noticias">
+                        <label for="suscripcion-noticias">Noticias</label>
+                        <input type="checkbox" id="suscripcion-promociones" name="suscripcion" value="promociones">
+                        <label for="suscripcion-promociones">Promociones</label>
+                        <input type="checkbox" id="suscripcion-alertas" name="suscripcion" value="alertas" checked>
+                        <label for="suscripcion-alertas">Alertas</label>
+                        <input type="checkbox" id="suscripcion-eventos" name="suscripcion" value="eventos">
+                        <label for="suscripcion-eventos">Eventos</label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Cargar</button>
+            </form>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nombre</td><td></td></tr>
+                        <tr><td>Apellido</td><td></td></tr>
+                        <tr><td>Email</td><td></td></tr>
+                        <tr><td>Teléfono</td><td></td></tr>
+                        <tr><td>Edad</td><td></td></tr>
+                        <tr><td>Dirección</td><td></td></tr>
+                        <tr><td>Provincia</td><td></td></tr>
+                        <tr><td>Código Postal</td><td></td></tr>
+                        <tr><td>Método de contacto preferido</td><td></td></tr>
+                        <tr><td>Tipo de suscripción</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Diego Fierro. Uncoma / Curzas.</p>
+    </footer>
+</body>
+</html>
