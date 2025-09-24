@@ -21,8 +21,6 @@ header {
     color: #ecf0f1;
     padding: 1.5rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Centramos el header y usamos un posicionamiento de la navegación*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,4 +112,214 @@ footer {
     color: #ecf0f1;
     margin-top: auto;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*
+    Estilos para el formulario y la tabla de contacto
+*/
+
+.contenido-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-formulario h1 {
+    text-align: center;
+}
+
+.contenido-formulario a {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    display: block; /* Asegura que el enlace ocupe toda la línea */
+}
+
+.contenido-formulario a:hover {
+    text-decoration: none;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left; /* Alinea los campos a la izquierda */
+}
+
+.campo-form {
+    margin-bottom: 20px; /* Aumentado para más separación */
+    display: flex;
+    flex-direction: column; /* Fuerza los elementos uno debajo del otro */
+}
+
+.campo-form label {
+    display: block; /* Forzar el label a ocupar una línea completa */
+    margin-bottom: 8px; /* Aumentado el espacio entre label e input */
+    font-weight: 500; /* Añade un poco de peso al texto del label */
+}
+
+.campo-form input[type="text"],
+.campo-form input[type="email"],
+.campo-form input[type="tel"],
+.campo-form input[type="number"],
+.campo-form textarea,
+.campo-form input[list] {
+    width: 100%;
+    max-width: 400px; /* Aumentado para mejor legibilidad */
+    box-sizing: border-box;
+    padding: 10px 12px; /* Aumentado el padding para mejor usabilidad */
+    border: 1px solid #ccc; /* Color de borde más suave */
+    border-radius: 5px; /* Bordes más redondeados */
+    font-size: 1em;
+    transition: border-color 0.3s ease; /* Transición suave en el foco */
+}
+
+/* Efecto de foco para inputs */
+.campo-form input[type="text"]:focus,
+.campo-form input[type="email"]:focus,
+.campo-form input[type="tel"]:focus,
+.campo-form input[type="number"]:focus,
+.campo-form textarea:focus,
+.campo-form input[list]:focus {
+    outline: none;
+    border-color: #34495e;
+    box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.2);
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 80px; /* Aumentado para mejor usabilidad */
+    font-family: inherit; /* Hereda la fuente del body */
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 20px 0; /* Aumentado para consistencia */
+}
+
+legend {
+    font-weight: 500; /* Consistente con los labels */
+    padding: 0;
+    margin-bottom: 10px; /* Aumentado para consistencia */
+    display: block;
+}
+
+.opciones-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Aumentado el espaciado */
+    margin-top: 5px;
+}
+
+.opciones-inline label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 8px; /* Aumentado el gap */
+    font-weight: normal; /* Los labels de radio/checkbox no necesitan peso extra */
+}
+
+.opciones-inline input[type="radio"],
+.opciones-inline input[type="checkbox"] {
+    width: auto;
+    max-width: none;
+    margin: 0;
+}
+
+button[type="submit"] {
+    margin-top: 25px;
+    padding: 12px 24px; /* Aumentado para mejor apariencia */
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2c3e50;
+}
+
+.tabla-contenedor {
+    max-width: 800px; /* Aumentado para mejor visualización */
+    width: 100%;
+    margin-top: 40px;
+    overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
+}
+
+/*
+    Estilos mejorados para la tabla:
+    Mejor visibilidad y bordes más definidos
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    border: 2px solid #34495e; /* Borde exterior más grueso */
+    border-radius: 8px;
+    overflow: hidden; /* Para que funcionen los bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+th, td {
+    border: 1px solid #bdc3c7; /* Bordes más visibles */
+    padding: 12px 15px; /* Más padding para mejor legibilidad */
+    text-align: left;
+    vertical-align: top; /* Alineación vertical consistente */
+}
+
+th {
+    background-color: #34495e; /* Coincide con el header */
+    font-weight: bold;
+    color: #ecf0f1; /* Texto blanco para contraste */
+    font-size: 1em;
+    text-transform: uppercase; /* Estilo más profesional */
+    letter-spacing: 0.5px;
+}
+
+td {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+/* Filas alternadas para mejor legibilidad */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Efecto hover en filas */
+tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+/* Responsividad para tablas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .tabla-contenedor {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    form {
+        padding: 0 15px;
+    }
+    
+    .campo-form input[type="text"],
+    .campo-form input[type="email"],
+    .campo-form input[type="tel"],
+    .campo-form input[type="number"],
+    .campo-form textarea,
+    .campo-form input[list] {
+        max-width: 100%;
+    }
 }
